@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import './Auth.css';
 import { useContext, useState } from 'react';
-import { authUser } from '../services/auth';
-import { UserContext } from '../context/UserContext';
+import { authUser } from '../../services/auth';
+import { UserContext } from '../../context/UserContext';
 
 export default function Auth() {
   const { type } = useParams();

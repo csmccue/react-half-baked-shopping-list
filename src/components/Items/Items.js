@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useItems } from '../../hooks/useItems';
 import { toggleListItem, createListItem } from '../../services/items';
 import { Redirect } from 'react-router-dom';
-import { UserContext } from '../context/UserContext';
+import { UserContext } from '../../context/UserContext';
 import { useContext } from 'react';
 
 export default function Items() {
