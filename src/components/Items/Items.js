@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useItems } from '../../hooks/useItems';
 import { toggleListItem, createListItem } from '../../services/items';
+import { Redirect } from 'react-router-dom';
+import { UserContext } from '../context/UserContext';
+import { useContext } from 'react';
 
 export default function Items() {
   const [name, setName] = useState('');
@@ -10,6 +13,11 @@ export default function Items() {
 
   // TODO -- redirect the user back to auth if there is not a current user
 
+  const { user } = useContext(UserContext);
+  if (!user) {
+    return <Redirect to="/auth/sign-in" />;
+  }
+// end additions
   const handleClick = async (item) => {
     try {
       const updatedItem = await toggleListItem(item);
