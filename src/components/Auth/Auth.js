@@ -20,7 +20,7 @@ export default function Auth() {
     setPassword('');
   };
   if (user) {
-    return <Redirect to="/tasks" />;
+    return <Redirect to="/items" />;
   }
 
   return (
